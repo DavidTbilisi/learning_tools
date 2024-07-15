@@ -9,6 +9,8 @@
 
 ## Courses
 
-|Link|Description|
-|--|--|
-|[Git Visually](https://youtu.be/1ffBJ4sVUb4?si=U-Dpxwm8pJkVN-pr&t=698)|Unpluged tutorial|
+|Link|Description|Tag|
+|--|--|--|
+|[Git Visually](https://youtu.be/1ffBJ4sVUb4?si=U-Dpxwm8pJkVN-pr&t=698)|Unpluged tutorial|Code, Teach, Tools|
+|[ГРОКАЕМ АЛГОРИТМЫ Audio Book](https://youtu.be/3DwX27Zc2HE?si=xNXskrqvqzVkUzxa)|Algo lvl easy|Code, Algorithms|
+
