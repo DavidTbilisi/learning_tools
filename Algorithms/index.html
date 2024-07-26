@@ -30,6 +30,8 @@
             });
         });
     </script>
+    <script src="../js/algo.js" defer></script>
+
     <link rel="stylesheet" href="../style/style.css">
 </head>
 
@@ -47,11 +49,16 @@
         <section>
             <h2>ბმულები</h2>
             <ul>
-                <li><a target="_blank" href="https://youtu.be/3DwX27Zc2HE?si=xNXskrqvqzVkUzxa"> ГРОКАЕМ АЛГОРИТМЫ </a></li>
-                <li><a target="_blank" href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/">GeeksforGeeks</a></li>
-                <li><a target="_blank" href="https://www.tutorialspoint.com/data_structures_algorithms/index.htm">TutorialsPoint</a></li>
+                <li><a target="_blank" href="https://youtu.be/3DwX27Zc2HE?si=xNXskrqvqzVkUzxa"> ГРОКАЕМ АЛГОРИТМЫ </a>
+                </li>
+                <li><a target="_blank"
+                        href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/">GeeksforGeeks</a></li>
+                <li><a target="_blank"
+                        href="https://www.tutorialspoint.com/data_structures_algorithms/index.htm">TutorialsPoint</a>
+                </li>
                 <li><a target="_blank" href="https://www.freecodecamp.org/learn/">FreeCodeCamp</a></li>
-                <li><a target="_blank" href="https://www.khanacademy.org/computing/computer-science/algorithms">Khan Academy</a></li>
+                <li><a target="_blank" href="https://www.khanacademy.org/computing/computer-science/algorithms">Khan
+                        Academy</a></li>
                 <li><a target="_blank" href="https://www.coursera.org/courses?query=algorithms">Coursera</a></li>
                 <li><a target="_blank" href="https://www.edx.org/learn/algorithms">edX</a></li>
                 <li><a target="_blank" href="https://www.udemy.com/courses/search/?q=algorithms">Udemy</a></li>
@@ -83,9 +90,395 @@
                 <li>ზოგავს რესურსებს</li>
             </ul>
 
-            <p>მაგალითი:</p>
-            <p>...</p>
+            <p>მაგალითი წრფივი და ბინარული ძიება: </p>
+            <!-- Georgian alphabet -->
+            <div class="alphabet">
+                <div class="step1">
+                    <h3>ნაბიჯი პირველი</h3>
+                    <p>წრფივი იწყებს პირველი ასოდან და მიყვება ნაბიჯ-ნაბიჯ</p>
+                    <p>ბინარული ყოფს ანბანს შუაზე და ადარებს საძიებო ასო მის წინ არის თუ მის უკან</p>
+                    <ul class="linear">
+                        <li class="current">ა</li>
+                        <li>ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li>ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+
+                    <ul class="binary">
+                        <li>ა</li>
+                        <li>ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li>ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li class="current">რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+                </div>
+                <div class="step2">
+                    <h3>ნაბიჯი მეორე</h3>
+                    <p>წრფივი იწყებს შემდეგ ასოდან და მიყვება ნაბიჯ-ნაბიჯ</p>
+                    <p>ბინარული ყოფს ანბანის მეორე ნახევარს შუაზე და ადარებს საძიებო ასო მის წინ არის თუ მის უკან</p>
+                    <ul class="linear">
+                        <li>ა</li>
+                        <li class="current">ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li>ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+
+                    <ul class="binary">
+                        <li>ა</li>
+                        <li>ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li>ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li class="current">თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+                </div>
+
+                <div class="step3">
+                    <h3>ნაბიჯი მესამე</h3>
+                    <p>წრფივი იწყებს შემდეგ ასოდან და მიყვება ნაბიჯ-ნაბიჯ</p>
+                    <p>ბინარული ყოფს ანბანის მესამი ნახევარს შუაზე და ადარებს საძიებო ასო მის წინ არის თუ მის უკან</p>
+                    <ul class="linear">
+                        <li>ა</li>
+                        <li>ბ</li>
+                        <li class="current">გ</li>
+                        <li>დ</li>
+                        <li>ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+
+                    <ul class="binary">
+                        <li>ა</li>
+                        <li>ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li>ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li class="current">მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+                </div>
+
+                <div class="step4">
+                    <h3>ნაბიჯი მეოთხე</h3>
+                    <p>წრფივი იწყებს შემდეგ ასოდან და მიყვება ნაბიჯ-ნაბიჯ</p>
+                    <p>ბინარული ყოფს ანბანის მეოთხე ნახევარს შუაზე და ადარებს საძიებო ასო მის წინ არის თუ მის უკან</p>
+                    <ul class="linear">
+                        <li>ა</li>
+                        <li>ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li class="current">ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+
+                    <ul class="binary">
+                        <li>ა</li>
+                        <li>ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li>ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li class="current">ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+                </div>
+
+                <div class="step5">
+                    <h3>ნაბიჯი მეხუთე</h3>
+                    <p>წრფივი იწყებს შემდეგ ასოდან და მიყვება ნაბიჯ-ნაბიჯ</p>
+                    <p>ბინარული ყოფს ანბანის მესამი ნახევარს შუაზე და ადარებს საძიებო ასო მის წინ არის თუ მის უკან</p>
+                    <ul class="linear">
+                        <li>ა</li>
+                        <li>ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li class="current">ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+
+                    <ul class="binary">
+                        <li>ა</li>
+                        <li>ბ</li>
+                        <li>გ</li>
+                        <li>დ</li>
+                        <li>ე</li>
+                        <li>ვ</li>
+                        <li>ზ</li>
+                        <li>თ</li>
+                        <li>ი</li>
+                        <li>კ</li>
+                        <li>ლ</li>
+                        <li>მ</li>
+                        <li>ნ</li>
+                        <li>ო</li>
+                        <li class="target current">პ</li>
+                        <li>ჟ</li>
+                        <li>რ</li>
+                        <li>ს</li>
+                        <li>ტ</li>
+                        <li>უ</li>
+                        <li>ფ</li>
+                        <li>ქ</li>
+                        <li>ღ</li>
+                        <li>ყ</li>
+                        <li>შ</li>
+                        <li>ჩ</li>
+                        <li>ც</li>
+                        <li>ძ</li>
+                        <li>წ</li>
+                        <li>ჭ</li>
+                        <li>ხ</li>
+                        <li>ჯ</li>
+                        <li>ჰ</li>
+                    </ul>
+                </div>
+            </div>
         </section>
+
         <section>
             <h2>ალგორითმის ეფექტურობა</h2>
             <p>Big O Notation</p>
